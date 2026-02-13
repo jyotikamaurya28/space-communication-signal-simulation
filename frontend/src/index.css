@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 220 20% 6%;
+    --foreground: 200 20% 90%;
+
+    --card: 220 18% 10%;
+    --card-foreground: 200 20% 90%;
+
+    --popover: 220 18% 10%;
+    --popover-foreground: 200 20% 90%;
+
+    --primary: 185 80% 50%;
+    --primary-foreground: 220 20% 6%;
+
+    --secondary: 220 15% 16%;
+    --secondary-foreground: 200 20% 80%;
+
+    --muted: 220 15% 14%;
+    --muted-foreground: 200 10% 50%;
+
+    --accent: 260 60% 55%;
+    --accent-foreground: 200 20% 95%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 200 15% 18%;
+    --input: 200 15% 18%;
+    --ring: 185 80% 50%;
+
+    --radius: 0.5rem;
+
+    --glow-primary: 185 80% 50%;
+    --glow-accent: 260 60% 55%;
+    --signal-original: 185 80% 50%;
+    --signal-delayed: 30 90% 55%;
+    --signal-doppler: 260 60% 55%;
+    --signal-noisy: 0 60% 55%;
+    --signal-filtered: 140 60% 50%;
+
+    --sidebar-background: 220 18% 8%;
+    --sidebar-foreground: 200 20% 90%;
+    --sidebar-primary: 185 80% 50%;
+    --sidebar-primary-foreground: 220 20% 6%;
+    --sidebar-accent: 220 15% 16%;
+    --sidebar-accent-foreground: 200 20% 90%;
+    --sidebar-border: 200 15% 18%;
+    --sidebar-ring: 185 80% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer utilities {
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(185 80% 50% / 0.15), 0 0 60px hsl(185 80% 50% / 0.05);
+  }
+
+  .glow-text {
+    text-shadow: 0 0 10px hsl(185 80% 50% / 0.5), 0 0 30px hsl(185 80% 50% / 0.2);
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(hsl(200 15% 18% / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(200 15% 18% / 0.5) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .font-mono-space {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
